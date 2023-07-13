@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<div class="container">
+<div style="overflow:auto">
+    <h3><div style="float:left;width:50%"><b>{{ object.course_name }}</b></div>
+    <div style="float:right;width:50%"><a href="{% url 'create-course' course_id=course.id %}">Create a new subject</a></div></h3>
+   
+    
+
+
+  </div>
+  </div>
+<br><br>
+<table class="table table-striped">
+
+    <tr><th></th>
+        <th>Subject Name</th>
+        <th>Subject Update</th>
+        <th>Subject Delete</th>
+        
+    </tr>
+
+    {% for subject in subjects %}
+    <tr><td>{{ forloop.counter }}</td>
+        <td>{{ subject.subject_name }}</td>
+        <td><a href="{% url 'subup' subject.id %}">Update</a></td>
+        <td><a href="{% url 'subdel' subject.id %}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

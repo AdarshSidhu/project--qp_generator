@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<center>
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+
+            <h2>PROFILE</h2>
+
+        </div>
+    </section>
+</center>
+<br><br>
+<center>
+
+
+    <div class="col-md-8">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{customer.basic_data.first_name}} {{user.last_name}}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{user.email}}
+                    </div>
+                </div>
+                <hr>
+                 <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Username</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{user.username}}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{customer.contact}}
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{customer.address}} {{customer.pincode}} {{customer.place}}
+                    </div>
+                </div>
+                <hr>
+                <br><br>
+               <button type="button" class="btn btn-sucess"><a href="{% url 'proedit' customer.id  %}"> Update Profile</a>
+            </button>
+                <br>
+                <br>
+                <br>
+                <br><br><br><br>
+            </div></div></div>
+</center>
+
+
+{% endblock %}

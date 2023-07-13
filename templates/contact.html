@@ -1,0 +1,306 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Feedback Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Stretch a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+
+    <script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+
+    </script>
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/contact.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+</head>
+
+<body>
+<!--Header-->
+<div class="top-bar_sub_w3layouts_agile">
+    <h6>MAKE CREATIVITY A HABIT <a href="#">Contact Us </a></h6>
+
+
+    <div class="clearfix"></div>
+</div>
+
+<div class="header inner_banner" id="home">
+    <!--/top-bar-->
+    <div class="top-bar">
+        <div class="header-nav-agileits">
+
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h1><a class="navbar-brand" href="{% url 'home' %}">Q P G S</a></h1>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                    <nav>
+                        <ul class="top_nav">
+
+                            <li><a href="{% url 'home' %}">Home</a></li>
+
+                            {% if user.is_authenticated and user.is_staff == False %}
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                            <li><a href="{% url 'viewqstn' %}">Inbox</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            {% elif user.is_authenticated and user.is_staff == True %}
+
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="Pages"
+                                   role="button" aria-haspopup="true" aria-expanded="false">Courses <span
+                                        class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'createcourse' %}">Add</a></li>
+                                    <li><a href="{% url 'viewcourse' %}">List</a></li>
+                                </ul>
+                            </li>
+
+
+
+                           
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="Pages"
+                                   role="button" aria-haspopup="true" aria-expanded="false">Question <span
+                                        class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'viewsubject' %}">Add</a></li>
+                                    <li><a href="{% url 'questionlist' %}">List</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'qngen' %}">Generate</a></li>
+                            <li><a href="{% url 'addpaper' %}">Mail</a></li>
+                            <li><a href="{% url 'feedback' %}">Feedbacks</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="Pages"
+                                   role="button" aria-haspopup="true" aria-expanded="false">College<span
+                                        class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{% url 'signup' %}">Register</a></li>
+                                    <li><a href="{% url 'colleges' %}">College</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            {% else %}
+
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <!--//top-bar-->
+    <!--/ banner-text -->
+    <!--// banner-text -->
+</div>
+<div class="services-breadcrumb-w3ls-agile">
+    <div class="inner_breadcrumb">
+
+        <ul class="short">
+            <li><a href="index.html">Home</a><span>|</span></li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>
+<!--//short-->
+<!-- //inner_content -->
+
+<!-- Modal1 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <div class="signin-form profile">
+
+                    <div class="login-m_page_img">
+
+                        <img src="{% static 'images/model.jpg' %}" alt=" " class="img-responsive"/>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Modal1 -->
+<!-- Modal2 -->
+
+<!-- //Modal2 -->
+
+<div class="alert alert-info">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+
+
+<!--//Header-->
+<div class="banner_bottom">
+    <div class="container">
+        <div class="tittle_head">
+            <h3 class="headerw3">Mail Us </h3>
+        </div>
+        <div class="inner_sec_w3_agileinfo">
+            <div class="col-md-8 map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62231.8338120595!2d77.5498171763006!3d13.005600134098984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1598a60b165d%3A0x2d18cf6c8d86e0e6!2sBangalore%20University%2C%20Gnana%20Bharathi%20Campus%2C%20Mysuru%20Rd%2C%20Jnana%20Bharathi%20Layout%2C%20Bengaluru%2C%20Karnataka%20560056%2C%20India!5e0!3m2!1sen!2sus!4v1650718576079" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        
+            <div class="col-md-4 contact_grids_info">
+                <div class="contact_grid">
+                    <div class="contact_grid_right">
+                        <h4> OFFICE 1</h4>
+                        <p>XHFM+X9X, Central College Campus, Post Office Rd, </p>
+                        <p>Bengaluru, Karnataka 560001 .</p>
+                    </div>
+                </div>
+                <div class="contact_grid">
+                    <div class="contact_grid_right">
+                        <h4> OFFICE 2</h4>
+                        <p> Palace Rd, P.K.Block, Gandhi Nagar,</p>
+                        <p>Bengaluru, Karnataka 560009.</p>
+                    </div>
+                </div>
+                <div class="contact_grid" data-aos="flip-up">
+
+                    <div class="contact_grid_right">
+                        <h4>OFFICE 3</h4>
+                        <p>GCC HOUSE, H. No. 340, 5TH MAIN, Paramahansa Yogananda Rd, Stage 1,</p>
+                        <p> Indiranagar, Bengaluru, Karnataka 560038.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+                <div class="mail_form">
+                  <h3 class="headerw3">Send Us a Message</h3>
+                   <div class="form-group row">
+                    {% load bootstrap4 %}
+                    <form class="form-horizontal" method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      {% bootstrap_form form %}
+                      <button type="submit" class="btn btn-primary" style="text-align: center">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+        
+        <div class="clearfix"></div>
+
+    </div>
+</div>
+
+
+<!--footer-->
+<div class="contact-footer-w3layouts-agile">
+
+
+    <div class="copy-w3-agileits">
+       <h2 class="footer-logo"><a href="index.html"> Question Paper Generator</a></h2>
+    <p>© 2023 . All Rights Reserved | Design by Sidhu</p>
+    <div class="clearfix"></div>
+    </div>
+</div>
+<!--/footer -->
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<!-- //js -->
+<!--search-bar-->
+<script src="{% static 'js/main.js' %}"></script>
+<!--//search-bar-->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+
+
+</script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+
+
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<script type="text/javascript" src="{% static 'js/bootstrap-3.1.1.min.js' %}"></script>
+
+
+</body>
+
+</html>

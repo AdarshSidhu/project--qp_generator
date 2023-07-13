@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+<center>
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+
+            <h2>LOGIN</h2>
+
+        </div>
+    </section>
+</center>
+
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% bootstrap_form form %}
+
+
+    <button type="submit" class="btn btn-success" style="text-align: center;">Submit</button>
+</form>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br><br><br><br>
+{% endblock %}

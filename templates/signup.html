@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<center>
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+
+
+            <h2>College Registration</h2>
+
+        </div>
+    </section>
+</center>
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {% bootstrap_form form1 %}
+    {% bootstrap_form form2 %}
+
+    <button type="submit" class="btn btn-success" style="align-center">Submit</button>
+</form>
+
+{% endblock %}

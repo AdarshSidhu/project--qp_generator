@@ -1,0 +1,607 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title> About </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Stretch a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design"/>
+
+    <script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+
+    </script>
+    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css'/>
+    <link href="{% static 'css/about.css' %}" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="{% static 'css/team.css' %}" type="text/css" media="all"/>
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Mallanna" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header inner_banner" id="home">
+        <!--/top-bar-->
+        <div class="top-bar">
+            <div class="header-nav-agileits">
+    
+                <nav class="navbar navbar-default">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <h1><a class="navbar-brand" href="{% url 'home' %}">Q P G S</a></h1>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav>
+                            <ul class="top_nav">
+    
+                                <li><a href="{% url 'home' %}">Home</a></li>
+    
+                                {% if user.is_authenticated and user.is_staff == False %}
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'profile' %}">Profile</a></li>
+                                <li><a href="{% url 'viewqstn' %}">Inbox</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                {% elif user.is_authenticated and user.is_staff == True %}
+    
+    
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="Pages"
+                                       role="button" aria-haspopup="true" aria-expanded="false">Courses <span
+                                            class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'createcourse' %}">Add</a></li>
+                                        <li><a href="{% url 'viewcourse' %}">List</a></li>
+                                    </ul>
+                                </li>
+    
+    
+    
+                               
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="Pages"
+                                       role="button" aria-haspopup="true" aria-expanded="false">Question <span
+                                            class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'viewsubject' %}">Add</a></li>
+                                        <li><a href="{% url 'questionlist' %}">List</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'qngen' %}">Generate</a></li>
+                                <li><a href="{% url 'addpaper' %}">Mail</a></li>
+                                <li><a href="{% url 'feedback' %}">Feedbacks</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="Pages"
+                                       role="button" aria-haspopup="true" aria-expanded="false">College<span
+                                            class="fa fa-angle-down"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{% url 'signup' %}">Register</a></li>
+                                        <li><a href="{% url 'colleges' %}">College</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'logout' %}">Logout</a></li>
+                                {% else %}
+    
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'login' %}">Login</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+    
+            </div>
+        </div>
+        <!--//top-bar-->
+        <!--/ banner-text -->
+        <!--// banner-text -->
+    </div>
+<!-- //inner_content -->
+
+<!-- Modal1 -->
+
+<!-- //Modal1 -->
+<!-- Modal2 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <div class="signin-form profile">
+
+                    <div class="login-m_page_img">
+
+                        <img src="{% static 'images/model.jpg' %}" alt=" " class="img-responsive"/>
+
+                    </div>
+                    <div class="login-m_page">
+                        <h3 class="sign">Sign Up</h3>
+                        <div class="login-form-wthree-agile">
+                            <form action="#" method="post">
+                                <input type="text" name="name" placeholder="Username" required="">
+                                <input type="email" name="email" placeholder="Email" required="">
+                                <input type="password" name="password" placeholder="Password" required="">
+                                <input type="password" name="password" placeholder="Confirm Password" required="">
+                                <input type="submit" value="Sign Up">
+                            </form>
+                        </div>
+                        <p><a href="#"> By clicking Sign up, I agree to your terms</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Modal2 -->
+
+<!--//Header-->
+
+<div class="banner_bottom">
+    <div class="container">
+        <h3 class="headerw3">About Us</h3>
+
+        <div class="inner_sec_w3_agileinfo">
+            <div class="ab_info">
+                <img src="{% static 'images/banner1.jpg' %}" alt=" " class="img-responsive">
+                <h4>Our Missions</h4>
+                <p class="sub_p">The mission of B.C.U. is creating, disseminating, and applying knowledge and nurturing learners towards our endeavor. As a state public university situated in the heart of Bengaluru, we aim to
+
+                    Be a gateway to knowledge for all while actively promoting access, affordability, equity, and inclusiveness.
+                    Foster a vibrant culture by facilitating an open exchange of knowledge and ideas among academia, government, industry, community, and society.
+                    Enrich the social, economic, cultural, and political heritage by leveraging on the human capital and resources of the city and the region.
+                    Enhance the reputation, growth, and potential of Bengaluru as a leading global metropolis.
+                    Achieve excellence in teaching, research, and service by engaging with issues of relevance in the local and global contexts.
+                    Create leaders of tomorrow across scientific, socio-economic, cultural, and political domains.
+                    Develop among students a spirit of inquiry, respect for labor, and social conscience.
+                    Become a distinctive public university by adopting innovative, efficient practices in its governance, academic and administrative affairs, and excel in serving all its constituencies.
+                </p>
+            </div>
+
+            <div class="news-main">
+                <div class="col-md-6 news-left">
+                    <div class="col-md-6 b_left">
+                        <img src="{% static 'images/g4.jpg' %}" alt=" " class="img-responsive">
+
+                    </div>
+                    <div class="col-md-6 b_right">
+                        <img src="{% static 'images/g1.jpg' %}" alt=" " class="img-responsive">
+
+                    </div>
+                </div>
+                <div class="col-md-6 news-right">
+                    <h4>Our Vision</h4>
+                    <p class="sub_p">
+                        Encourage a vibrant culture by promoting an open exchange of knowledge and ideas among academia, government, industry, community, and society. Enrich the social, economic, cultural, and political heritage by leveraging the city’s human capital and resources.
+                        
+                        We strive towards delivering our vision with the cooperation of our values ingrained in us by the originators of B.C.U. 
+                        
+                        Freedom of thought, speech, and exploration
+                        Academic and Industrial Autonomy
+                        Accountability and Integrity
+                        Gender and Social Justice
+                        Collegiality and shared responsibility
+                        Respect for Human Dignity and Labor
+                    </p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //about -->
+
+<div class="sec_video">
+    <div class="container">
+        <div class="about-main about1">
+            <div class="col-md-4 about-gd">
+                <div class="about-sub-gd">
+                    <h4>NSS</h4>
+                    <p>With discipline, we learn, and with resilience, we grow; this is our imparted slogan to our students. </p>
+                </div>
+                <div class="about-sub-gd">
+                    <h4>Expert Instructors</h4>
+                    <p>We have well effecient and well trained instructors to guide our students. </p>
+                </div>
+            </div>
+            <div class="col-md-4 about-gd1">
+                <img src="{% static 'images/video.jpg' %}" class="img-responsive" alt="">
+            </div>
+            <div class="col-md-4 about-gd ab-right">
+                <div class="about-sub-gd">
+                    <h4>Students Strong</h4>
+                    <p>Make Students strong to maintain a well decorum </p>
+                </div>
+                <div class="about-sub-gd">
+                    <h4>Physical Activity</h4>
+                    <p>Building the right sportsman spirit in each student, they strive for a balance between academics and sports. </p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!--/video-->
+<!-- /projects -->
+<div class="banner_bottom">
+    <div class="container">
+        <h3 class="headerw3">Our Staff</h3>
+        <div class="inner_sec_w3_agileinfo">
+            <div class="col-md-3 team_grid_info">
+                <img src="{% static 'images/t1.jpg' %}" alt=" " class="img-responsive"/>
+                <h3>Jane Mycle </h3>
+                <p>Director</p>
+
+                <div class="team_icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/login" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/login" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/login" class="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-3 team_grid_info">
+                <img src="{% static 'images/t2.jpg' %}" alt=" " class="img-responsive"/>
+                <h3>Amanda Seylon </h3>
+                <p>Pricipal</p>
+
+                <div class="team_icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/login" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/login" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/login" class="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 team_grid_info">
+                <img src="{% static 'images/t3.jpg' %}" alt=" " class="img-responsive"/>
+                <h3>Laura Mark</h3>
+                <p>Faculty</p>
+
+                <div class="team_icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/login" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/login" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/login" class="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-md-3 team_grid_info">
+                <img src="{% static 'images/t1.jpg' %}" alt=" " class="img-responsive"/>
+                <h3>Jane Mycle </h3>
+                <p>Faculty</p>
+
+                <div class="team_icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/login" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.twitter.com/login" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/login" class="dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<!-- //projects -->
+<!-- /stats -->
+<div class="stats_test">
+    <h3 class="headerw3 two">Our Stats</h3>
+    <div class="inner_sec_w3_agileinfo">
+        <div class="stats">
+            <div class="stats_left counter_grid">
+                <i class="fa fa-building-o" aria-hidden="true"></i>
+                <p class="counter">145</p>
+                <h4>Colleges & Universities</h4>
+            </div>
+            <div class="stats_left counter_grid1">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p class="counter">365</p>
+                <h4>Faculties</h4>
+            </div>
+            <div class="stats_left counter_grid2">
+                <i class="fa fa-spinner" aria-hidden="true"></i>
+                <p class="counter">563</p>
+                <h4>Careers</h4>
+            </div>
+            <div class="stats_left counter_grid3">
+                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                <p class="counter">1045</p>
+                <h4>Happy Students</h4>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<!-- //stats -->
+
+<!--/banner_bottom-->
+<div class="banner_bottom">
+    <div class="banner_bottom_in">
+        <h3 class="headerw3">Take the world's best courses, online.</h3>`
+
+        <p>A place to provide students with enough knowledge and skills in a complex world. Are you looking for exceptional education experience? BCU might be the place for you.</p>
+
+        <div class="edu_button">
+            <a class="btn btn-primary btn-lg hvr-underline-from-left" href="#" role="button">Read More </a>
+        </div>
+        <iframe src="https://www.youtube.com/embed/HndV87XpkWg" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+    </div>
+</div>
+<!--//banner_bottom-->
+
+<!--/what-wedo-->
+<div class="what-wedo">
+    <div class="container">
+        <h3 class="headerw3 two">Career Advice</h3>
+        <div class="inner_sec_w3_agileinfo">
+            <div class="wedo-main">
+                <div class="wedo-right">
+
+                </div>
+                <div class="wedo-left">
+                    <h4 class="sub-hdng">Grow Your Digital Skills With Accenture</h4>
+                    <p class="paragraph">Our specialist Faculty Careers Consultants are experienced and qualified to provide advice and guidance around all types of jobs and industries.
+                        explicabo.</p>
+                    <h4 class="sub-hdng">Our team of professionals have experience in</h4>
+                    <p class="paragraph"><span class="fa fa-check" aria-hidden="true"></span>Teaching</p>
+                    <p class="paragraph"><span class="fa fa-check" aria-hidden="true"></span>Strong Communicators</p>
+                    <p class="paragraph"><span class="fa fa-check" aria-hidden="true"></span>Manage</p>
+                    <p class="paragraph"><span class="fa fa-check" aria-hidden="true"></span>Clear communication</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/what-wedo-->
+
+<!-- /newsletter-->
+
+<!-- //newsletter-->
+
+<!--/tesimonials-->
+<div class="tesimonials">
+    <div class="container">
+        <h3 class="headerw3 two">Testimonials</h3>
+        <div class="inner_sec_w3_agileinfo">
+            <div class="test_grid_sec">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="carousel slide two" data-ride="carousel" id="quote-carousel">
+                        <!-- Bottom Carousel Indicators -->
+                        <ol class="carousel-indicators two">
+                            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#quote-carousel" data-slide-to="1"></li>
+                            <li data-target="#quote-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Carousel Slides / Quotes -->
+                        <div class="carousel-inner">
+
+                            <!-- Quote 1 -->
+                            <div class="item active">
+                                <blockquote>
+                                    <div class="test_grid">
+                                        <div class="col-sm-3 text-center test_img">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+
+                                        </div>
+                                        <div class="col-sm-9 test_img_info">
+                                            <p>Using the question paper generator project has been a game-changer for me as a teacher. It has saved me countless hours of manual question preparation.</p>.</p>
+                                            <h6>Sara Lisbon</h6>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 2 -->
+                            <div class="item">
+                                <blockquote>
+                                    <div class="test_grid">
+                                        <div class="col-sm-3 text-center test_img">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-sm-9 test_img_info">
+                                            <p>I have been using the question paper generator project for my tutoring business, and my clients love it. It allows me to quickly generate practice papers for different subjects and grade levels.</p>
+                                            <h6>Jane Wearne</h6>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- Quote 3 -->
+                            <div class="item">
+                                <blockquote>
+                                    <div class="test_grid">
+                                        <div class="col-sm-3 text-center test_img">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-sm-9 test_img_info">
+                                            <p>As a student, the question paper generator project has been a lifesaver. It ensures that I have access to a variety of well-structured and challenging questions for practice.</p>
+                                            <h6>Alice Williams</h6>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- bootstrap-modal-pop-up -->
+<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                Luscious
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="{% static 'images/model.jpg' %}" alt=" " class="img-responsive"/>
+                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
+                    aliquid ex ea commodi
+                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur,
+                    vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //bootstrap-modal-pop-up -->
+<!--footer-->
+<div class="copy-w3-agileits">
+    <h2 class="footer-logo"><a href="index.html"> Question Paper Generator</a></h2>
+    <p>© 2021 . All Rights Reserved | Design by Sidhu</p>
+    <div class="clearfix"></div>
+</div>
+
+
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<!-- //js -->
+<!--search-bar-->
+<script src="{% static 'js/main.js' %}"></script>
+<!--gallery -->
+<script src="{% static 'js/jquery.chocolat.js' %}"></script>
+<!--light-box-files -->
+<script type="text/javascript">
+		$(function () {
+			$('.gallery-grid1 a').Chocolat();
+		});
+
+</script>
+<!-- //gallery -->
+<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+<script>
+		$(function () {
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: true,
+				nav: true,
+				speed: 1000,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+		});
+
+</script>
+<!--//search-bar-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/easy-responsive-tabs.css' %} "/>
+<script src="{% static 'js/easyResponsiveTabs.js' %}"></script>
+<!--Plug-in Initialisation-->
+<script type="text/javascript">
+		$(document).ready(function () {
+
+			//Vertical Tab
+			$('#parentVerticalTab').easyResponsiveTabs({
+				type: 'vertical', //Types: default, vertical, accordion
+				width: 'auto', //auto or any width like 600px
+				fit: true, // 100% fit in a container
+				closed: 'accordion', // Start closed if in accordion view
+				tabidentify: 'hor_1', // The tab groups identifier
+				activate: function (event) { // Callback function if tab is switched
+					var $tab = $(this);
+					var $info = $('#nested-tabInfo2');
+					var $name = $('span', $info);
+					$name.text($tab.text());
+					$info.show();
+				}
+			});
+		});
+
+</script>
+<!--/script-->
+<!-- stats -->
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.countup.js' %}"></script>
+<script>
+		$('.counter').countUp();
+
+</script>
+<!-- //stats -->
+
+
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+
+</script>
+<!-- start-smoth-scrolling -->
+
+<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+									var defaults = {
+							  			containerID: 'toTop', // fading element id
+										containerHoverID: 'toTopHover', // fading element hover id
+										scrollSpeed: 1200,
+										easingType: 'linear' 
+							 		};
+									*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<script type="text/javascript" src="{% static 'js/bootstrap-3.1.1.min.js' %}"></script>
+
+
+</body>
+
+</html>
