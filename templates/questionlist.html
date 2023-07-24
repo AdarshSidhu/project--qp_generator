@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+ <form action="{% url 'search' %}" method="GET">
+            <input type="search" name="search" placeholder=" Subject/Question" required/>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
+
+<h2 align="center">Questions</h2><br>
+<table class="table">
+
+    <tr><th></th>
+        <th>Subject</th>
+         <th >Difficulty</th>
+        <th>Question</th>
+        <th colspan="2" align="center">Updations</th>
+    </tr>
+    {% for i in products %}
+    <tr><td>{{ forloop.counter }}</td>
+        <td>{{i.subjects}}</td>
+        <td>{{i.difficulty}}</td>
+        <td>{{i.questions}}</td>
+        <td><a href="{% url 'quesup' i.id %}">Update</a></td>
+       <td><a href="{% url 'quesdel' i.id %}">Delete</a></td>
+    </tr>{% endfor %}
+</table>
+
+
+
+    {% endblock %}

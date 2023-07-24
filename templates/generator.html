@@ -1,0 +1,85 @@
+<html>
+<body>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+  &nbsp;<b>Reg No:</b>
+
+    <center>
+        <h3><b>{{ coursename }} DEGREE EXAMINATION, JUNE 2023</b></h3>
+       
+        
+        {% for question in questions %}
+        
+          {% if forloop.counter == 1 %}
+
+          {% if  question.semesters  == 1 %}
+          <b> First Semester</b><br>
+          {% elif  question.semesters  == 2 %}
+          <b> Second Semester</b><br>
+          {% elif  question.semesters  == 3 %}
+          <b> Third Semester</b><br>
+          {% elif  question.semesters  == 4 %}
+          <b> Fourth Semester</b><br>
+          {% elif  question.semesters  == 5 %}
+          <b> Fifth Semester</b><br>
+          {% elif  question.semesters  == 6 %}
+          <b> Sixth Semester</b><br>
+          {% elif  question.semesters  == 7 %}
+          <b> Seventh Semester</b><br>
+          {% elif  question.semesters  == 8 %}
+          <b> Eighth Semester</b><br>
+          {% endif %}
+            <b><br> {{ question.subjects.subject_name }}</b><br>
+            
+            
+          {% endif %}
+        {% endfor %}
+        (CBCS Y2K20 Scheme)<br>
+        2021 Admission Onwards<br>
+      </center>
+
+<br>
+Time: 3 Hours &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max Mark: 70
+
+
+<br>
+<center><b>Part A (Short Essay Questions)</b><br>
+    Answer any five questions<br>
+    Weight <b>6</b> each
+
+</center>
+
+
+<pre>
+
+</pre>
+
+{% for question in questions %}
+<b>{{ forloop.counter }}.&nbsp;</b>
+{{ question.questions }}<br>
+
+
+{% if forloop.counter == 8%}
+<br><br>
+<center><b>Part B ( Essay Questions)</b><br>
+    Answer any four questions<br>
+    Weight <b>10</b> each
+<br><br>
+</center>
+
+{% endif %}
+
+
+{% endfor %}
+
+</body>
+</html>

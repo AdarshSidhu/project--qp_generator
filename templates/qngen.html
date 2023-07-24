@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<h2 align="center">Questions</h2><br>
+
+
+    {% for person in list %}
+    <b>{{ forloop.counter }}.&nbsp;</b>
+    {{ person.subject_name }}
+
+<p>
+
+
+    {% if forloop.counter == 1 %}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'generate_pdf' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'generate_pdf2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'generate_pdf3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 2%}
+
+    <button type="button" class="btn btn-success"><a href="{% url 'ds' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'ds2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'ds3' %}">Hard</a></button>
+
+    {% endif %}
+    {% if forloop.counter == 3%}
+
+    <button type="button" class="btn btn-success"><a href="{% url 'network' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'network2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'network3' %}">Hard</a></button>
+
+    
+    {% endif %}
+    {% if forloop.counter == 4%}
+
+    <button type="button" class="btn btn-success"><a href="{% url 'sql' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'sql2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'sql3' %}">Hard</a></button>
+
+    
+    {% endif %}
+    {% if forloop.counter == 5%}
+
+    
+    <button type="button" class="btn btn-success"><a href="{% url 'marketing' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'marketing2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'marketing3' %}">Hard</a></button>
+
+
+    {% endif %}
+    {% if forloop.counter == 6%}
+
+    
+    <button type="button" class="btn btn-success"><a href="{% url 'business' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'business2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'business3' %}">Hard</a></button>
+
+  
+    {% endif %}
+    {% if forloop.counter == 7%}
+
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'tally' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'tally2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'tally3' %}">Hard</a></button>
+    
+    {% endif %}
+    {% if forloop.counter == 8%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'business' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'business2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'business3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 9%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'stati' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'stati2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'stati3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 10%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'tally' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'tally2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'tally3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 11%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'sw' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'sw2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'sw3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 12%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 13%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 14%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 15%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 16%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 17%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 18%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 19%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+    {% if forloop.counter == 20%}
+
+
+    <button type="button" class="btn btn-success"><a href="{% url 'mining' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'mining2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'mining3' %}">Hard</a></button>
+    {% endif %}
+   
+    
+    <br><br>
+</p>
+
+{% endfor %}
+
+
+{% endblock %}
+
+
+
+
+
+
+
+<!--
+<button type="button" class="btn btn-success"><a href="{% url 'account' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'account2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'account3' %}">Hard</a></button>
+
+    <button type="button" class="btn btn-success"><a href="{% url 'maths' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'maths2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'maths3' %}">Hard</a></button>
+
+    <button type="button" class="btn btn-success"><a href="{% url 'web' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'web2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'web3' %}">Hard</a></button>
+
+    <button type="button" class="btn btn-success"><a href="{% url 'os' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'os2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'os3' %}">Hard</a></button>
+
+    
+    <button type="button" class="btn btn-success"><a href="{% url 'java' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'java2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'java3' %}">Hard</a></button>
+
+    <button type="button" class="btn btn-success"><a href="{% url 'Methodology' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'Methodology2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'Methodology3' %}">Hard</a></button>
+    
+<button type="button" class="btn btn-success"><a href="{% url 'digital' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'digital2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'digital3' %}">Hard</a></button>
+
+    
+    <button type="button" class="btn btn-success"><a href="{% url 'finance' %}">Simple</a></button>
+    <button type="button" class="btn btn-warning"><a href="{% url 'finance2' %}">Medium</a></button>
+    <button type="button" class="btn btn-danger"><a href="{% url 'finance3' %}">Hard</a></button>
+    
+-->

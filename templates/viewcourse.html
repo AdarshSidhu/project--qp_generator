@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+
+
+
+<table class="table table-dark">
+
+    <tr>
+        <th></th>
+        <th>Course Name</th>
+        
+    </tr>
+    {% for i in list %}
+    <tr><td>{{ forloop.counter }}</td>
+        <td><a href="{% url 'course_detail' i.id %}">{{i.course_name}}</a></td>
+       
+       
+    </tr>{% endfor %}
+</table>
+
+    {% endblock %}

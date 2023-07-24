@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<form class="form-horizontal" method="post" enctype="multipart/form-data">
+     Are You Sure To Delete ?<br>
+    All Records associated with it will be deleted ?
+    {% csrf_token %}
+
+    {{  form.as_p }}
+<br>
+    <br>
+
+    <button type="submit" class="btn btn-danger" style="align-center">Submit</button>
+</form>
+
+{% endblock %}

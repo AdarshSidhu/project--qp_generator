@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+
+<table class="table">
+    {% for i in list %}
+    <tr>
+        <td>{{ i.subjects }}</td>
+        {% if is_download_allowed %}
+        <td><a href="{{ i.qstn.url }}" download="{{ i.qstn.url }}">Download</a></td>
+        {% else %}
+        <td>Downloads will be available after 9:45 am</td>
+        {% endif %}
+    </tr>
+    {% empty %}
+    <tr>
+        <td><img src="{% static 'images/data.png' %}" alt="No Data Found!" class="img-responsive"/></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
